@@ -26,11 +26,11 @@ def display_history(history):
 def main():
     history = []
     
-    print("Welcome to the Interactive Calculator CLI!")
-    print("Type 'exit' to quit the program.\n")
+    print("      ***  Welcome to the Interactive Calculator CLI! ***")
+    print("                 Type 'bye' to quit the program.\n       ")
 
     while True:
-        user_input = input("Enter operation (add, subtract, multiply, divide) followed by two numbers, or 'history' to view previous calculations:\n> ")
+        user_input = input("Enter operation (add, subtract, multiply, divide) followed by two numbers, \n or 'history' to view previous calculations:\n> ")
 
         if user_input.lower() == 'bye':
             print("Exiting the calculator. Goodbye!")
@@ -63,7 +63,7 @@ def main():
                 continue
 
             print(f'The result of {operation} {a} and {b} is: {result}')
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            timestamp = datetime.now().strftime("%H:%M")
             history.append(f"[{timestamp}] {operation.capitalize()} {a} and {b} = {result}")
 
         except ValueError as e:
